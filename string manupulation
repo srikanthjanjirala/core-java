@@ -1,0 +1,97 @@
+1) Odd and Evet first odd charector of word should be even [Done]
+input : "my name is srikanth janjirala"
+output : "My name Is Srikanth janjirala"
+
+2) Reverse String [Done]
+3) Count String [Done]
+"hi my name is srikanth janjirala"
+4) get only numbers [Done]
+5) get only alphabet value [Done]
+6) get Max Number [Done]
+7) get only start with 1 [Done]
+String input = "1,18,28,38,112,56,15";
+
+8) Manage ordering [Done]
+input nums = [10, 10, 8, 6, 8, 4, 4, 3, 2, 1]
+output = [ 1,2,3,4,6,8,10 ] 
+
+9) Find All Substrings of a String[Done]
+Input: "abc" → Output: "a", "ab", "abc", "b", "bc", "c"
+
+10) Check if a String Contains Only Digits [Done]
+Input: "12345" → Output: true
+11) Count the Number of Vowels and Consonants
+Input: "education" → Output: Vowels: 5, Consonants: 4
+
+12) Capitalize the First Letter of Each Word [Done]
+Input: "hello world" → Output: "Hello World"
+
+13) Compress a String Using Character Counts [Done]
+Input: "aaabbccc" → Output: "a3b2c3"
+
+14) Longest Substring Without Repeating Characters [Done]
+Input: "abcabcbb" → Output: "abc" (length = 3)
+
+15) Implement strStr() (Find Substring)
+Input: haystack = "hello", needle = "ll" → Output: 2
+
+16) Check if a String is a Palindrome [Done]
+Input: "madam" → Output: true
+
+17) Remove Duplicate Characters from a String [Done]
+Input: "programming" → Output: "progamin"
+
+18) Count the Occurrence of Each Character [Done]
+Input: "apple" → Output: {a=1, p=2, l=1, e=1}
+
+19) Check if Two Strings are Anagrams [Done]
+Input: "listen" and "silent" → Output: true
+
+20) Find the First Non-Repeated Character [Done]
+Input: "aabbccde" → Output: 'd'
+
+String strt = str.replaceAll(" ","");
+
+21) {12,2,4,-6,8,16,18,26}[Done]
+I want Sum of pair is 20 like 18+2, 26-6,16+4, 8+12. Print the pair of numbers.
+
+22) removeDuplicate 
+        List<List<String>> arr =  Arrays.asList(
+                    Arrays.asList("Java", "Java1", "Java2"),
+                    Arrays.asList("Java", "Java3", "Java2"),
+                    Arrays.asList("Java4", "Java1", "Java2")
+            );
+
+23) Array employee data filter with stream api 
+
+24) 
+//    int [] in = {8, 3, 6, 1, -2, 0, 9};
+//    Multiply even number with 2
+//    Odd number with 3
+//            0 or less with 0
+//    sum the multiplied elements and return sum
+
+24) Create a labda function
+
+25) Filter Only Alphabetic Characters from a String Using Java Stream API
+String str = "a1b2c3#@d$%eF9G";
+
+["a","b","c"]
+String.join("",out)
+
+
+
+26) Swap the number a =20 b =30 c= 40 [Done]
+swap the number
+
+27) Swap the numbers without addition and substraction [Done]
+
+
+
+// Find the greatest number using ternary operator
+int max = (a > b) ? ( (a > c) ? a : c ) : ( (b > c) ? b : c );
+
+// get only the specific hyderabad data only
+
+producers kafka 
+

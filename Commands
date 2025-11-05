@@ -1,0 +1,7 @@
+1) mvn spring-boot:run
+It will download and install only the missing dependencies (like your newly added jjwt ones).
+2) mvn clean install
+this will rebuilt cleanly install
+3)mvn clean verify
+
+

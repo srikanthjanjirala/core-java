@@ -1,0 +1,21 @@
+class A
+{
+    void hello()throws ArithmeticException
+    {
+        System.out.println("parent");
+    }
+}
+
+class B extends A
+{
+    void hello() throws Exception
+    {
+        System.out.println("child");
+    }
+
+    public static void main(String arg[])
+    {
+        A a1=new B();
+        a1.hello();
+    }
+}

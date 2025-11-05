@@ -1,0 +1,11 @@
+1) find the employee with duplicate value
+SELECT * from employee WHERE salary IN(select salary from employee GROUP BY salary HAVING COUNT(*) > 1);
+
+
+2) joins
+3) 
+select * from employee join user on employee.id = user.id;
+
+composit key
+
+ how to manage the 

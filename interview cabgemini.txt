@@ -1,0 +1,40 @@
+What will be the output of the code?
+   class Main {
+      public static void main (String[] args) {
+        List list = new ArrayList();
+        list.add("hello");
+        list.add(2);
+        System.out.print(list.get(0) instanceof Object);
+        System.out.print(list.get(1) instanceof Integer);
+     }
+   }
+
+
+
+class A
+{
+    void hello()throws ArithmeticException
+    {
+        System.out.println("parent");
+    }
+}
+
+class B extends A
+{
+    void hello() throws Exception
+    {
+        System.out.println("child");
+    }
+
+    public static void main(String arg[])
+    {
+        A a1=new B();
+        a1.hello();
+    }
+}
+
+A: Print "parent"
+B: Print "child"
+C: Compilation Error
+D: Runtime Exception
+has context menu

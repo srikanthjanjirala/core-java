@@ -1,0 +1,41 @@
+// FileNotFoundException and IOException
+try {
+    FileReader reader = new FileReader("test.pdf");
+    System.out.println("File opened successfully.");
+} catch (FileNotFoundException e) {
+    System.out.println("File not found: " + e.getMessage());
+} catch (IOException e) {
+    System.out.println("I/O error: " + e.getMessage());
+}
+
+
+// Un checked exception
+
+
+// NullPointerException
+try{
+    String str = null;
+    str.length();
+} catch (NullPointerException e){
+    System.out.println(e.getMessage());
+}
+
+
+// IllegalAccessException
+try {
+    Integer age = -10;
+    if (age < 0){
+        throw new IllegalAccessException("Age cannot be greater then");
+    }
+} catch (IllegalAccessException e){
+    System.out.println(e.getMessage());
+}
+
+
+// ArithmeticException and call as a run time exception
+try {
+    int result = 10 / 0;
+    System.out.println("Result: " + result);
+} catch (Exception e){
+    System.out.println("Error: " + e.getMessage());
+}
