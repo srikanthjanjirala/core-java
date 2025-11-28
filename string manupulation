@@ -95,3 +95,6 @@ int max = (a > b) ? ( (a > c) ? a : c ) : ( (b > c) ? b : c );
 
 producers kafka 
 
+
+28) Get highest salary of department [Done]
+29) Merge common seperated values using stream 

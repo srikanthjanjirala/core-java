@@ -8,7 +8,6 @@ try {
     System.out.println("I/O error: " + e.getMessage());
 }
 
-
 // Un checked exception
 
 
@@ -16,8 +15,11 @@ try {
 try{
     String str = null;
     str.length();
+
+    // throw new NullPointerException("String is null");
 } catch (NullPointerException e){
     System.out.println(e.getMessage());
+    throw new NullPointerException("String is null");
 }
 
 
@@ -38,4 +40,17 @@ try {
     System.out.println("Result: " + result);
 } catch (Exception e){
     System.out.println("Error: " + e.getMessage());
+}
+
+
+class A{
+
+}
+
+class B extends A{
+
+}
+
+class C extends A{
+
 }
