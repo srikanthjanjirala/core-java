@@ -8,4 +8,4 @@ select * from employee join user on employee.id = user.id;
 
 composit key
 
- how to manage the 
+how to manage the 

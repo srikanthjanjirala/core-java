@@ -38,7 +38,7 @@ try {
 try {
     int result = 10 / 0;
     System.out.println("Result: " + result);
-} catch (Exception e){
+}36. catch (Exception e){
     System.out.println("Error: " + e.getMessage());
 }
 

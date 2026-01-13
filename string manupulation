@@ -61,17 +61,18 @@ I want Sum of pair is 20 like 18+2, 26-6,16+4, 8+12. Print the pair of numbers.
                     Arrays.asList("Java", "Java3", "Java2"),
                     Arrays.asList("Java4", "Java1", "Java2")
             );
+        - get data who have a min 2 times repeated string
 
-23) Array employee data filter with stream api 
+23) Array employee data filter with stream api [Done]
 
-24) 
+24) [Done]
 //    int [] in = {8, 3, 6, 1, -2, 0, 9};
 //    Multiply even number with 2
 //    Odd number with 3
 //            0 or less with 0
 //    sum the multiplied elements and return sum
 
-24) Create a labda function
+24) Create a labda function [Done]
 
 25) Filter Only Alphabetic Characters from a String Using Java Stream API
 String str = "a1b2c3#@d$%eF9G";
@@ -79,14 +80,10 @@ String str = "a1b2c3#@d$%eF9G";
 ["a","b","c"]
 String.join("",out)
 
-
-
 26) Swap the number a =20 b =30 c= 40 [Done]
 swap the number
 
 27) Swap the numbers without addition and substraction [Done]
-
-
 
 // Find the greatest number using ternary operator
 int max = (a > b) ? ( (a > c) ? a : c ) : ( (b > c) ? b : c );
@@ -95,6 +92,28 @@ int max = (a > b) ? ( (a > c) ? a : c ) : ( (b > c) ? b : c );
 
 producers kafka 
 
-
 28) Get highest salary of department [Done]
-29) Merge common seperated values using stream 
+29) Merge common seperated values using stream [Done]
+
+30) Funcitinal interface to get a greater value between a 2 number 
+
+31) FibonacciSeries [Done]
+The fibonacci serires is a sequence where each numbers is the sum of previous 2 numbers
+
+32) Prime number check[Done]
+
+33) Arrays.asList(11,2,42,61,14,23,26,71,9,10,68,11) [Done]
+// find the second largest number without sorting
+// sample output 68
+
+34) Order the number original and reverse order [Done]
+
+35) Find Employee salary > 60000 [Done]
+
+36) Group Employee Department and count 
+
+37) Find highest paid employee by department and count [Done]
+
+38) sort employee by salary in descending order; [Done]
+
+Employee id int, name String, dept string, and salary int

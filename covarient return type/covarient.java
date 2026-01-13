@@ -7,7 +7,7 @@ class Animal {
 
 class Dog extends Animal {
     @Override
-    public Dog getAnimal() {  // Covariant return type: Dog is a subclass of Animal
+    public Dog getAnimal() {  // Covariant return type: Dog is a subclass of Animalpa
         System.out.println("Dog returned");
         return new Dog();
     }
