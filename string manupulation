@@ -117,3 +117,9 @@ The fibonacci serires is a sequence where each numbers is the sum of previous 2 
 38) sort employee by salary in descending order; [Done]
 
 Employee id int, name String, dept string, and salary int
+
+39) input = 2[abc]3[cd]ef 
+output  = abcabccdcdcdef
+
+40) using stream Sort by number, inputs: "Five_5", "Two_2", "Seven_7", "Three_3", "Eleven_11"
+output = [Two_2, Three_3, Five_5, Seven_7, Eleven_11]
