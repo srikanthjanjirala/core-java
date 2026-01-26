@@ -122,4 +122,19 @@ Employee id int, name String, dept string, and salary int
 output  = abcabccdcdcdef
 
 40) using stream Sort by number, inputs: "Five_5", "Two_2", "Seven_7", "Three_3", "Eleven_11"
-output = [Two_2, Three_3, Five_5, Seven_7, Eleven_11]
+output = [Two_2, Three_3, Five_5, Seven_7, Eleven_11] [24-01-2026]
+
+41) White a code to find the duplicate integers the count of the integers
+
+42) Write a program to fid the highest length of a work in string exp: String s = "This is sample string"
+result : 6
+
+43) Sorting [24-01-2026]
+Merge Sort, 
+Bubble Sort, 
+Quick Sort,
+Array Sort, 
+String Sort,
+Stack and Queue,
+
+
