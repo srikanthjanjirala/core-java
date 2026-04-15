@@ -1,5 +1,12 @@
 // Child class using both abstract class and interface
 class Dolphin extends AnimalAbstract implements SwimmableInterface {
+
+    public Dolphin(String name, int age) {
+        // super(name, age); // calling abstract class constructor
+        this.name = name;
+        this.age = age;
+    }
+
     // Implement abstract method from Animal
     @Override
     void sound() {

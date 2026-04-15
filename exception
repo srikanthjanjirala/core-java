@@ -23,13 +23,13 @@ try{
 }
 
 
-// IllegalAccessException
+// IllegalArgumentException
 try {
     Integer age = -10;
     if (age < 0){
-        throw new IllegalAccessException("Age cannot be greater then");
+        throw new IllegalArgumentException("Age cannot be greater then");
     }
-} catch (IllegalAccessException e){
+} catch (IllegalArgumentException e){
     System.out.println(e.getMessage());
 }
 
@@ -38,7 +38,7 @@ try {
 try {
     int result = 10 / 0;
     System.out.println("Result: " + result);
-}36. catch (Exception e){
+} catch (ArithmeticException e){
     System.out.println("Error: " + e.getMessage());
 }
 

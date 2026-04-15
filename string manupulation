@@ -96,7 +96,7 @@ producers kafka
 29) Merge common seperated values using stream [Done]
 
 30) Funcitinal interface to get a greater value between a 2 number 
-
+        
 31) FibonacciSeries [Done]
 The fibonacci serires is a sequence where each numbers is the sum of previous 2 numbers
 
@@ -122,7 +122,7 @@ Employee id int, name String, dept string, and salary int
 output  = abcabccdcdcdef
 
 40) using stream Sort by number, inputs: "Five_5", "Two_2", "Seven_7", "Three_3", "Eleven_11"
-output = [Two_2, Three_3, Five_5, Seven_7, Eleven_11] [24-01-2026]
+output = [Two_2, Three_3, Five_5, Seven_7, Eleven_11] [Done]
 
 41) White a code to find the duplicate integers the count of the integers
 
@@ -130,11 +130,56 @@ output = [Two_2, Three_3, Five_5, Seven_7, Eleven_11] [24-01-2026]
 result : 6
 
 43) Sorting [24-01-2026]
-Merge Sort, 
+Merge Sort, [Done]
 Bubble Sort, 
 Quick Sort,
 Array Sort, 
-String Sort,
+String Sort, [Done]
 Stack and Queue,
 
 
+44) Check is balenced "[{()}]" [Done]
+45) Next Generaed elements [Done]
+46) get more then two times duplicate value [Done]
+47) give a list employee with properties [Done with stream]
+48) kthSmallestIn Array [Done] on office laptop
+Arrays.asList(7,2,,6,3,9,1) 
+49) permitationOfString[Done] on office laptop
+50) Check power of 10[Done] on office laptop
+51) Find Longest Concurentive charector sequence in string[Done]on office laptop
+52) Take a charector and check whether its upper case lowecase a digit or a specific charector [Done]on office laptop
+
+
+
+Given list employee with properties id,name,age,generaed,salary
+- count male and female employee
+- calculate average salary for male and female employee
+- find the youngest employee in the list
+
+- using stream and query
+- Take a number and print whethere is is a positive or negetive
+- Check the number is even or odd
+- Check the number is devided by 5 or not
+- Check the number if its devided with 3 and 5 
+- Check the givenyear is leap or not
+- Take a temparecture value and print "Cold", "warn" or "Hot" using range condition
+- Take a charector and check if its vowel or Consonants
+- 
+- Find the maximun element in an Array
+- Count the number of even and odd number un a list
+- Sort an array using the bubble sort
+- Find the sum of digites if the numbers
+- Merge Two sort arraty into one
+- Count the frequence of element in array
+- Find the missing numbers in a range from 1 to N
+- Check if two string are Anagrams
+- Find the larges sum subarray(KaDANE'S ALGORITHM)
+- Check the number is an Armstring number
+- Rotate an array to the left left by K steps
+- Find the intersection of two Arrays
+- Move all the zeros to end of the array
+- Check the number is perfect sequence
+- Find the GCD of tw numbers
+- Conver Binary number to decimal
+- Implement stack using the array
+- Find the majority elements in an array(if any)

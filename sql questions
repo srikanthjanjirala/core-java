@@ -9,3 +9,5 @@ select * from employee join user on employee.id = user.id;
 composit key
 
 how to manage the 
+
+2) Get the employee whose email exists only one time

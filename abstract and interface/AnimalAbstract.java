@@ -1,4 +1,9 @@
 abstract class AnimalAbstract {
+
+    // Instance variables
+    String name;
+    double salary;
+
     // Abstract method (must be implemented in child)
     abstract void sound();
 
