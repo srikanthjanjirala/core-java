@@ -1,0 +1,17 @@
+SQL Execution Priority Order
+-------
+SELECT
+FROM
+WHERE
+GROUP BY
+HAVING
+ORDER BY
+LIMIT
+
+Example
+-------
+SELECT department, COUNT(*)
+FROM employees
+WHERE salary > 30000
+GROUP BY department
+ORDER BY department;

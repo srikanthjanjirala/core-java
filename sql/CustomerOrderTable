@@ -1,0 +1,225 @@
+sql id="n71v1x"
+-- =========================================================
+-- CUSTOMERS TABLE
+-- =========================================================
+
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100),
+    phone VARCHAR(20),
+    city VARCHAR(50),
+    state VARCHAR(50),
+    registration_date DATE
+);
+
+-- =========================================================
+-- PRODUCTS TABLE
+-- =========================================================
+
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(100),
+    category VARCHAR(50),
+    brand VARCHAR(50),
+    price DECIMAL(10,2),
+    stock_quantity INT
+);
+
+-- =========================================================
+-- ORDERS TABLE
+-- =========================================================
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    product_id INT,
+    quantity INT,
+    total_amount DECIMAL(10,2),
+    payment_method VARCHAR(30),
+    order_status VARCHAR(30),
+    order_date DATE,
+
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+    FOREIGN KEY (product_id) REFERENCES products(product_id)
+);
+
+-- =========================================================
+-- RETURNS TABLE
+-- =========================================================
+
+CREATE TABLE returns (
+    return_id INT PRIMARY KEY,
+    order_id INT,
+    return_reason VARCHAR(200),
+    refund_amount DECIMAL(10,2),
+    return_status VARCHAR(30),
+    return_date DATE,
+
+    FOREIGN KEY (order_id) REFERENCES orders(order_id)
+);
+
+-- =========================================================
+-- INSERT CUSTOMERS
+-- =========================================================
+
+INSERT INTO customers VALUES
+(1,'Rahul','Sharma','rahul@gmail.com','9876543210','Hyderabad','Telangana','2025-01-10'),
+(2,'Anjali','Reddy','anjali@gmail.com','9876543211','Bangalore','Karnataka','2025-01-12'),
+(3,'Kiran','Kumar','kiran@gmail.com','9876543212','Chennai','Tamil Nadu','2025-01-15'),
+(4,'Sneha','Patel','sneha@gmail.com','9876543213','Mumbai','Maharashtra','2025-01-16'),
+(5,'Arjun','Verma','arjun@gmail.com','9876543214','Delhi','Delhi','2025-01-18'),
+(6,'Pooja','Singh','pooja@gmail.com','9876543215','Pune','Maharashtra','2025-01-20'),
+(7,'Vikram','Naidu','vikram@gmail.com','9876543216','Vizag','Andhra Pradesh','2025-01-21'),
+(8,'Meena','Joshi','meena@gmail.com','9876543217','Kolkata','West Bengal','2025-01-22'),
+(9,'Suresh','Yadav','suresh@gmail.com','9876543218','Jaipur','Rajasthan','2025-01-23'),
+(10,'Divya','Iyer','divya@gmail.com','9876543219','Coimbatore','Tamil Nadu','2025-01-25');
+
+-- =========================================================
+-- INSERT PRODUCTS
+-- =========================================================
+
+INSERT INTO products VALUES
+(101,'iPhone 15','Mobile','Apple',80000,50),
+(102,'Galaxy S24','Mobile','Samsung',70000,40),
+(103,'MacBook Pro','Laptop','Apple',150000,20),
+(104,'Dell Inspiron','Laptop','Dell',65000,35),
+(105,'Boat Headphones','Accessories','Boat',2500,100),
+(106,'Sony Headphones','Accessories','Sony',5500,80),
+(107,'Mechanical Keyboard','Accessories','Logitech',4500,60),
+(108,'Gaming Mouse','Accessories','Razer',3500,70),
+(109,'iPad Air','Tablet','Apple',60000,25),
+(110,'Smart Watch','Wearable','Noise',5000,90);
+
+-- =========================================================
+-- INSERT 30 ORDERS
+-- =========================================================
+
+INSERT INTO orders VALUES
+(1001,1,101,1,80000,'UPI','Delivered','2026-01-01'),
+(1002,2,102,1,70000,'Credit Card','Delivered','2026-01-02'),
+(1003,3,103,1,150000,'Net Banking','Delivered','2026-01-03'),
+(1004,4,104,1,65000,'UPI','Delivered','2026-01-03'),
+(1005,5,105,2,5000,'Cash On Delivery','Delivered','2026-01-04'),
+(1006,6,106,1,5500,'UPI','Delivered','2026-01-04'),
+(1007,7,107,1,4500,'Credit Card','Delivered','2026-01-05'),
+(1008,8,108,1,3500,'UPI','Cancelled','2026-01-05'),
+(1009,9,109,1,60000,'Net Banking','Delivered','2026-01-06'),
+(1010,10,110,2,10000,'UPI','Delivered','2026-01-06'),
+
+(1011,1,102,1,70000,'UPI','Delivered','2026-01-07'),
+(1012,2,103,1,150000,'Credit Card','Delivered','2026-01-07'),
+(1013,3,104,1,65000,'UPI','Delivered','2026-01-08'),
+(1014,4,105,3,7500,'UPI','Delivered','2026-01-08'),
+(1015,5,106,1,5500,'Debit Card','Delivered','2026-01-09'),
+(1016,6,107,2,9000,'UPI','Delivered','2026-01-09'),
+(1017,7,108,1,3500,'UPI','Delivered','2026-01-10'),
+(1018,8,109,1,60000,'Credit Card','Delivered','2026-01-10'),
+(1019,9,110,1,5000,'UPI','Delivered','2026-01-11'),
+(1020,10,101,1,80000,'Net Banking','Delivered','2026-01-11'),
+
+(1021,1,103,1,150000,'UPI','Delivered','2026-01-12'),
+(1022,2,104,1,65000,'Credit Card','Delivered','2026-01-12'),
+(1023,3,105,1,2500,'UPI','Returned','2026-01-13'),
+(1024,4,106,1,5500,'Debit Card','Delivered','2026-01-13'),
+(1025,5,107,1,4500,'UPI','Delivered','2026-01-14'),
+(1026,6,108,2,7000,'Credit Card','Delivered','2026-01-14'),
+(1027,7,109,1,60000,'UPI','Delivered','2026-01-15'),
+(1028,8,110,1,5000,'Net Banking','Delivered','2026-01-15'),
+(1029,9,101,1,80000,'UPI','Delivered','2026-01-16'),
+(1030,10,102,1,70000,'Credit Card','Delivered','2026-01-16');
+
+-- =========================================================
+-- INSERT RETURNS
+-- =========================================================
+
+INSERT INTO returns VALUES
+(1,1002,'Damaged Product',70000,'Refund Completed','2026-01-10'),
+(2,1005,'Wrong Item Delivered',5000,'Refund Completed','2026-01-11'),
+(3,1008,'Product Not Needed',3500,'Refund Pending','2026-01-12'),
+(4,1012,'Defective Product',150000,'Refund Completed','2026-01-13'),
+(5,1017,'Quality Issue',3500,'Refund Completed','2026-01-14'),
+(6,1023,'Item Missing',2500,'Refund Pending','2026-01-15');
+
+-- =========================================================
+-- QUERY:
+-- PRODUCTS PURCHASED BUT NEVER RETURNED
+-- =========================================================
+
+SELECT DISTINCT
+    p.product_id,
+    p.product_name,
+    p.brand,
+    p.category
+FROM orders o
+JOIN products p
+    ON o.product_id = p.product_id
+LEFT JOIN returns r
+    ON o.order_id = r.order_id
+WHERE r.order_id IS NULL;
+
+-- =========================================================
+-- QUERY:
+-- CUSTOMERS WHO NEVER RETURNED ANY PRODUCT
+-- =========================================================
+
+SELECT DISTINCT
+    c.customer_id,
+    c.first_name,
+    c.last_name,
+    c.city
+FROM customers c
+JOIN orders o
+    ON c.customer_id = o.customer_id
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM returns r
+    WHERE r.order_id = o.order_id
+);
+
+-- =========================================================
+-- QUERY:
+-- MOST RETURNED PRODUCTS
+-- =========================================================
+
+SELECT
+    p.product_name,
+    COUNT(r.return_id) AS total_returns
+FROM returns r
+JOIN orders o
+    ON r.order_id = o.order_id
+JOIN products p
+    ON o.product_id = p.product_id
+GROUP BY p.product_name
+ORDER BY total_returns DESC;
+
+-- =========================================================
+-- QUERY:
+-- TOTAL SALES BY CUSTOMER
+-- =========================================================
+
+SELECT
+    c.first_name,
+    c.last_name,
+    SUM(o.total_amount) AS total_spent
+FROM customers c
+JOIN orders o
+    ON c.customer_id = o.customer_id
+GROUP BY c.customer_id, c.first_name, c.last_name
+ORDER BY total_spent DESC;
+
+-- =========================================================
+-- QUERY:
+-- TOP SELLING PRODUCTS
+-- =========================================================
+
+SELECT
+    p.product_name,
+    SUM(o.quantity) AS total_quantity_sold
+FROM orders o
+JOIN products p
+    ON o.product_id = p.product_id
+GROUP BY p.product_name
+ORDER BY total_quantity_sold DESC;
+

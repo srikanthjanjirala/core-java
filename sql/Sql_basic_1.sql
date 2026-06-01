@@ -110,3 +110,61 @@ SELECT
 FROM ranked_dept_comp
 WHERE rn = 1
 ORDER BY department_name;
+
+
+-----------
+#Find the duplicate records in the table
+select city,count(*) as total_city from user GROUP BY city HAVING total_city > 5 
+------------------------------------------------------------------
+2) Second Highest salary from the employee
+
+SELECT salary
+FROM (
+    SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS rnk
+    FROM employees
+) t
+WHERE rnk = 2;
+
+WITH hishest_salary_employee_order as ( SELECT *,DENSE_RANK() OVER(
+	ORDER BY base_salary DESC
+	) as salary_sn FROM learning_mysql.salaries
+)
+
+select * from learning_mysql.employees e JOIN hishest_salary_employee_order h ON e.id = h.employee_id WHERE h.salary_sn = 2;
+----------------------------------------------------------------
+3) Find the employees who do not have a department
+
+SELECT * FROM learning_mysql.employees e LEFT JOIN learning_mysql.departments d ON e.department_id = d.id WHERE d.id IS NUll;
+
+----------------------------------------------------------------
+3) Find the employees who subscriber to more than 2 times
+SELECT s.employee_id,count(*) as salary_count from learning_mysql.salaries s GROUP BY s.employee_id HAVING salary_count >= 2;
+
+----------------------------------------------------------------
+4) Calculate total revenue per product
+
+----------------------------------------------------------------
+5) Customer who made the purchase but never returned the product
+SELECT 
+    c.*
+FROM
+    learning_mysql.customers c
+        INNER JOIN
+    learning_mysql.orders o ON o.customer_id = c.customer_id
+        LEFT JOIN
+    learning_mysql.returns AS r ON r.order_id = o.order_id
+WHERE
+    r.return_id IS NULL
+----------------------------------------------------------------
+6) Retrieve all customers who registered in the year 2025
+-
+SELECT * from learning_mysql.customers WHERE YEAR(registration_date) = 2025
+
+- Better Version (Uses Index Efficiently) index friendly
+SELECT * from learning_mysql.customers WHERE registration_date >= '2025-01-01' AND registration_date < '2026-01-01'
+----------------------------------------------------------------
+7) Calculate the average order value for each customer
+SELECT o.customer_id,AVG(o.total_amount) as avg_salary FROM learning_mysql.orders o GROUP BY o.customer_id
+
+8) Find the product that never sold
+SELECT p.* FROM learning_mysql.products p LEFT JOIN learning_mysql.orders o ON o.product_id = p.product_id WHERE o.order_id IS NULL

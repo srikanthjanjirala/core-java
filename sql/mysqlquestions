@@ -1,6 +1,15 @@
-1) What is an execution plan?
+1) What is an execution plan? [Done]
 2) Difference between EXPLAIN and actual execution?
 3) What is query optimizer?
 4) What does type = ALL mean?
 5) How to improve query performance using execution plan?
 6) Difference between ref and range?
+7) How to recover the deleted data
+8) Differet between indexing and partitioning
+
+
+------------
+1) Find the duplicate records in the table [Done]
+- #Using window functions (modern approach)
+2) Second Highest salary from the employee
+3) Find the employee without department

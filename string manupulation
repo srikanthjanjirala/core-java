@@ -149,8 +149,6 @@ Arrays.asList(7,2,,6,3,9,1)
 51) Find Longest Concurentive charector sequence in string[Done]on office laptop
 52) Take a charector and check whether its upper case lowecase a digit or a specific charector [Done]on office laptop
 
-
-
 Given list employee with properties id,name,age,generaed,salary
 - count male and female employee
 - calculate average salary for male and female employee
@@ -183,3 +181,6 @@ Given list employee with properties id,name,age,generaed,salary
 - Conver Binary number to decimal
 - Implement stack using the array
 - Find the majority elements in an array(if any)
+- Max Sum using the 3 concecutive integers [Done]
+- Swap two numbers [Done]
+Arrays.asList("12","3","6","12");
